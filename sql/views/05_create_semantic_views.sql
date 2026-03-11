@@ -1,7 +1,7 @@
 /*===========================================================================
-  TSG Consumer Partners — Step 5: Semantic Views for Cortex Analyst
+  TSG Consumer Partners - Step 5: Semantic Views for Cortex Analyst
   Script: 05_create_semantic_views.sql
-  
+
   Prerequisites: Run scripts 01-04 first
   Creates semantic views for Cortex Analyst text-to-SQL capabilities
 ===========================================================================*/
@@ -30,9 +30,9 @@ CREATE OR REPLACE SEMANTIC VIEW SV_PORTFOLIO_PERFORMANCE
 
   RELATIONSHIPS (
     revenue_to_portfolio AS
-      revenue (COMPANY_ID) REFERENCES portfolio,
+      revenue (COMPANY_ID) REFERENCES portfolio (COMPANY_ID),
     deals_to_portfolio AS
-      deals (COMPANY_ID) REFERENCES portfolio
+      deals (COMPANY_ID) REFERENCES portfolio (COMPANY_ID)
   )
 
   FACTS (
@@ -115,9 +115,7 @@ CREATE OR REPLACE SEMANTIC VIEW SV_PORTFOLIO_PERFORMANCE
       COMMENT = 'Average projected MOIC'
   )
 
-  AI_SQL_GENERATION 'Always round financial values to 2 decimal places. When comparing companies, include company name and sector. For time series queries, order by fiscal year and quarter. Use dollar formatting for large numbers.'
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers portfolio company performance, revenue analytics, and investment deal metrics for TSG Consumer Partners. If the question is about brand health, social media, or consumer sentiment, suggest using the Brand Analytics semantic view instead.'
-  COMMENT = 'Portfolio performance analysis — revenue, profitability, investment returns';
+  COMMENT = 'Portfolio performance analysis - revenue, profitability, investment returns';
 
 CREATE OR REPLACE SEMANTIC VIEW SV_BRAND_ANALYTICS
 
@@ -137,9 +135,9 @@ CREATE OR REPLACE SEMANTIC VIEW SV_BRAND_ANALYTICS
 
   RELATIONSHIPS (
     brand_to_portfolio AS
-      brand (COMPANY_ID) REFERENCES portfolio,
+      brand (COMPANY_ID) REFERENCES portfolio (COMPANY_ID),
     market_to_portfolio AS
-      market (COMPANY_ID) REFERENCES portfolio
+      market (COMPANY_ID) REFERENCES portfolio (COMPANY_ID)
   )
 
   DIMENSIONS (
@@ -195,9 +193,7 @@ CREATE OR REPLACE SEMANTIC VIEW SV_BRAND_ANALYTICS
       COMMENT = 'Average market growth rate'
   )
 
-  AI_SQL_GENERATION 'Round percentages to 1 decimal place. When showing trends, include metric_date ordered chronologically. For brand comparisons, include company_name and sector.'
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers brand health metrics, consumer sentiment, and market research data. If the question is about financial performance or revenue, suggest using the Portfolio Performance semantic view instead.'
-  COMMENT = 'Brand analytics — health scores, sentiment, market position, and consumer trends';
+  COMMENT = 'Brand analytics - health scores, sentiment, market position, and consumer trends';
 
 CREATE OR REPLACE SEMANTIC VIEW SV_REVENUE_GROWTH
 
@@ -216,9 +212,9 @@ CREATE OR REPLACE SEMANTIC VIEW SV_REVENUE_GROWTH
 
   RELATIONSHIPS (
     revenue_to_portfolio AS
-      revenue (COMPANY_ID) REFERENCES portfolio,
+      revenue (COMPANY_ID) REFERENCES portfolio (COMPANY_ID),
     channels_to_portfolio AS
-      channels (COMPANY_ID) REFERENCES portfolio
+      channels (COMPANY_ID) REFERENCES portfolio (COMPANY_ID)
   )
 
   DIMENSIONS (
@@ -233,17 +229,13 @@ CREATE OR REPLACE SEMANTIC VIEW SV_REVENUE_GROWTH
     revenue.fiscal_quarter AS FISCAL_QUARTER
       WITH SYNONYMS = ('quarter')
       COMMENT = 'Fiscal quarter',
-    revenue.channel AS REVENUE_CHANNEL
+    revenue.channel AS CHANNEL
       COMMENT = 'Revenue channel',
     revenue.region AS REGION
       COMMENT = 'Geographic region',
     channels.channel_type AS CHANNEL_TYPE
       WITH SYNONYMS = ('sales channel', 'distribution type')
-      COMMENT = 'Type of sales channel (DTC, Amazon, Wholesale, Subscription)',
-    channels.fiscal_year AS CHANNEL_FISCAL_YEAR
-      COMMENT = 'Channel performance fiscal year',
-    channels.fiscal_quarter AS CHANNEL_FISCAL_QUARTER
-      COMMENT = 'Channel performance fiscal quarter'
+      COMMENT = 'Type of sales channel'
   )
 
   METRICS (
@@ -275,8 +267,6 @@ CREATE OR REPLACE SEMANTIC VIEW SV_REVENUE_GROWTH
       COMMENT = 'Average repeat purchase rate'
   )
 
-  AI_SQL_GENERATION 'Round financial values to 2 decimal places and percentages to 1 decimal. For channel comparison queries, group by channel_type. For time series, order by fiscal_year and fiscal_quarter.'
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers revenue growth analytics and channel performance. For brand health or sentiment questions, use the Brand Analytics view.'
   COMMENT = 'Revenue growth and channel performance analysis';
 
 CREATE OR REPLACE SEMANTIC VIEW SV_ECOMMERCE_DIGITAL
@@ -293,7 +283,7 @@ CREATE OR REPLACE SEMANTIC VIEW SV_ECOMMERCE_DIGITAL
 
   RELATIONSHIPS (
     digital_to_portfolio AS
-      digital (COMPANY_ID) REFERENCES portfolio
+      digital (COMPANY_ID) REFERENCES portfolio (COMPANY_ID)
   )
 
   DIMENSIONS (
@@ -349,8 +339,6 @@ CREATE OR REPLACE SEMANTIC VIEW SV_ECOMMERCE_DIGITAL
       COMMENT = 'Average LTV to CAC ratio'
   )
 
-  AI_SQL_GENERATION 'Round percentages to 1 decimal place and currency values to 2 decimals. For trend analysis, order by metric_date. When comparing digital channels, group by digital_channel.'
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers eCommerce and digital marketing analytics including website traffic, conversion, email performance, and ROAS. For financial revenue data, use the Portfolio Performance or Revenue Growth semantic views.'
   COMMENT = 'eCommerce and digital marketing performance analytics';
 
 CREATE OR REPLACE SEMANTIC VIEW SV_OPERATIONAL_EFFICIENCY
@@ -367,7 +355,7 @@ CREATE OR REPLACE SEMANTIC VIEW SV_OPERATIONAL_EFFICIENCY
 
   RELATIONSHIPS (
     ops_to_portfolio AS
-      ops (COMPANY_ID) REFERENCES portfolio
+      ops (COMPANY_ID) REFERENCES portfolio (COMPANY_ID)
   )
 
   DIMENSIONS (
@@ -403,8 +391,8 @@ CREATE OR REPLACE SEMANTIC VIEW SV_OPERATIONAL_EFFICIENCY
       WITH SYNONYMS = ('COGS', 'cost of goods')
       COMMENT = 'Average COGS as percentage of revenue',
     ops.avg_sga_pct AS AVG(SGA_PCT_REVENUE)
-      WITH SYNONYMS = ('SG&A', 'selling general administrative')
-      COMMENT = 'Average SG&A as percentage of revenue',
+      WITH SYNONYMS = ('SGA', 'selling general administrative')
+      COMMENT = 'Average SGA as percentage of revenue',
     ops.total_capex AS SUM(CAPEX)
       WITH SYNONYMS = ('capital expenditure', 'capex')
       COMMENT = 'Total capital expenditure',
@@ -415,6 +403,4 @@ CREATE OR REPLACE SEMANTIC VIEW SV_OPERATIONAL_EFFICIENCY
       COMMENT = 'Average cash conversion efficiency'
   )
 
-  AI_SQL_GENERATION 'Round all metrics to 2 decimal places. For operational comparisons, include company_name and sector. For trend analysis, order by metric_date.'
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers operational efficiency metrics including supply chain, fulfillment, inventory, and cost structure. For revenue or brand questions, use the appropriate specialized semantic views.'
   COMMENT = 'Operational efficiency and supply chain performance analytics';

@@ -1,10 +1,18 @@
 /*===========================================================================
-  TSG Consumer Partners — Step 8: ML Model Functions & Agent UDFs
+  TSG Consumer Partners - Step 8: ML Model Functions and Agent UDFs
   Script: 08_ml_model_functions.sql
-  
+
   Prerequisites: Run scripts 01-07 first (notebook must be run to register models)
   Creates UDF functions that call registered ML models from the Snowflake
   Model Registry and return enriched results for the Cortex Agent.
+
+  IMPORTANT: The feature queries here MUST match the training query in
+  notebooks/07_ml_models.ipynb cell c3. All filters use:
+    - REVENUE_DATA: FISCAL_YEAR >= 2024
+    - BRAND_METRICS: METRIC_DATE >= '2024-01-01'
+    - DIGITAL_ANALYTICS: METRIC_DATE >= '2024-01-01'
+    - OPERATIONS_METRICS: METRIC_DATE >= '2024-01-01'
+    - MARKET_RESEARCH: no date filter
 ===========================================================================*/
 
 USE ROLE ACCOUNTADMIN;
@@ -128,11 +136,11 @@ $$
     LEFT JOIN (
       SELECT COMPANY_ID, AVG(BRAND_EQUITY_INDEX) AS avg_brand_equity, AVG(NET_PROMOTER_SCORE) AS avg_nps,
              AVG(SOCIAL_ENGAGEMENT) AS avg_social_engagement, AVG(CUSTOMER_SAT_SCORE) AS avg_csat
-      FROM TSG_INTELLIGENCE.ANALYTICS.BRAND_METRICS WHERE METRIC_DATE >= '2024-06-01' GROUP BY COMPANY_ID
+      FROM TSG_INTELLIGENCE.ANALYTICS.BRAND_METRICS WHERE METRIC_DATE >= '2024-01-01' GROUP BY COMPANY_ID
     ) bm ON pc.COMPANY_ID = bm.COMPANY_ID
     LEFT JOIN (
       SELECT COMPANY_ID, AVG(CONVERSION_RATE) AS avg_conversion, AVG(LTV_CAC_RATIO) AS avg_ltv_cac
-      FROM TSG_INTELLIGENCE.ANALYTICS.DIGITAL_ANALYTICS WHERE METRIC_DATE >= '2024-06-01' GROUP BY COMPANY_ID
+      FROM TSG_INTELLIGENCE.ANALYTICS.DIGITAL_ANALYTICS WHERE METRIC_DATE >= '2024-01-01' GROUP BY COMPANY_ID
     ) da ON pc.COMPANY_ID = da.COMPANY_ID
     LEFT JOIN (
       SELECT COMPANY_ID, AVG(MARKET_GROWTH_RATE) AS market_growth
@@ -140,7 +148,7 @@ $$
     ) mr ON pc.COMPANY_ID = mr.COMPANY_ID
     LEFT JOIN (
       SELECT COMPANY_ID, AVG(DAYS_SALES_OUTSTANDING) AS avg_dso
-      FROM TSG_INTELLIGENCE.ANALYTICS.OPERATIONS_METRICS WHERE METRIC_DATE >= '2024-06-01' GROUP BY COMPANY_ID
+      FROM TSG_INTELLIGENCE.ANALYTICS.OPERATIONS_METRICS WHERE METRIC_DATE >= '2024-01-01' GROUP BY COMPANY_ID
     ) ops ON pc.COMPANY_ID = ops.COMPANY_ID
     WHERE pc.STATUS = 'Active'
   ),
@@ -307,7 +315,7 @@ $$
     ) bm ON pc.COMPANY_ID = bm.COMPANY_ID
     LEFT JOIN (
       SELECT COMPANY_ID, AVG(CONVERSION_RATE) AS avg_conversion, AVG(LTV_CAC_RATIO) AS avg_ltv_cac
-      FROM TSG_INTELLIGENCE.ANALYTICS.DIGITAL_ANALYTICS WHERE METRIC_DATE >= '2024-06-01' GROUP BY COMPANY_ID
+      FROM TSG_INTELLIGENCE.ANALYTICS.DIGITAL_ANALYTICS WHERE METRIC_DATE >= '2024-01-01' GROUP BY COMPANY_ID
     ) da ON pc.COMPANY_ID = da.COMPANY_ID
     LEFT JOIN TSG_INTELLIGENCE.ANALYTICS.MARKET_RESEARCH mr ON pc.COMPANY_ID = mr.COMPANY_ID
     WHERE pc.STATUS = 'Active'
