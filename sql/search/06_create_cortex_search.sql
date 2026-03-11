@@ -1,0 +1,89 @@
+/*===========================================================================
+  TSG Consumer Partners — Step 6: Cortex Search Services
+  Script: 06_create_cortex_search.sql
+  
+  Prerequisites: Run scripts 01-04 first (data must exist)
+  Creates Cortex Search services for document-based retrieval
+===========================================================================*/
+
+USE ROLE ACCOUNTADMIN;
+USE DATABASE TSG_INTELLIGENCE;
+USE SCHEMA ANALYTICS;
+USE WAREHOUSE TSG_WH;
+
+CREATE OR REPLACE CORTEX SEARCH SERVICE BRAND_STRATEGY_SEARCH
+  ON CONTENT
+  ATTRIBUTES COMPANY_NAME, SECTOR, CATEGORY, TAGS
+  WAREHOUSE = TSG_WH
+  TARGET_LAG = '1 hour'
+  COMMENT = 'Search service for brand strategy documents, playbooks, and portfolio insights'
+AS (
+  SELECT
+    bsd.CONTENT,
+    COALESCE(pc.COMPANY_NAME, 'TSG Portfolio') AS COMPANY_NAME,
+    COALESCE(pc.SECTOR, 'Cross-Portfolio') AS SECTOR,
+    bsd.CATEGORY,
+    bsd.TITLE,
+    bsd.TAGS,
+    bsd.AUTHOR,
+    bsd.PUBLISH_DATE
+  FROM TSG_INTELLIGENCE.ANALYTICS.BRAND_STRATEGY_DOCS bsd
+  LEFT JOIN TSG_INTELLIGENCE.ANALYTICS.PORTFOLIO_COMPANIES pc
+    ON bsd.COMPANY_ID = pc.COMPANY_ID
+);
+
+CREATE OR REPLACE CORTEX SEARCH SERVICE MARKET_RESEARCH_SEARCH
+  ON INSIGHT_SUMMARY
+  ATTRIBUTES COMPANY_NAME, SECTOR, CATEGORY, COMPETITIVE_POSITION
+  WAREHOUSE = TSG_WH
+  TARGET_LAG = '1 hour'
+  COMMENT = 'Search service for market research insights, competitive intelligence, and consumer trends'
+AS (
+  SELECT
+    mr.INSIGHT_SUMMARY,
+    COALESCE(pc.COMPANY_NAME, 'Industry') AS COMPANY_NAME,
+    COALESCE(pc.SECTOR, 'Cross-Sector') AS SECTOR,
+    mr.CATEGORY,
+    mr.COMPETITIVE_POSITION,
+    mr.CONSUMER_TREND,
+    mr.KEY_COMPETITORS,
+    mr.SOURCE,
+    mr.MARKET_SIZE_USD,
+    mr.MARKET_GROWTH_RATE
+  FROM TSG_INTELLIGENCE.ANALYTICS.MARKET_RESEARCH mr
+  LEFT JOIN TSG_INTELLIGENCE.ANALYTICS.PORTFOLIO_COMPANIES pc
+    ON mr.COMPANY_ID = pc.COMPANY_ID
+);
+
+CREATE OR REPLACE CORTEX SEARCH SERVICE PORTFOLIO_KNOWLEDGE_SEARCH
+  ON SEARCH_CONTENT
+  ATTRIBUTES COMPANY_NAME, SECTOR, CONTENT_TYPE
+  WAREHOUSE = TSG_WH
+  TARGET_LAG = '1 hour'
+  COMMENT = 'Unified search across portfolio company descriptions, deal notes, and strategic context'
+AS (
+  SELECT
+    pc.DESCRIPTION AS SEARCH_CONTENT,
+    pc.COMPANY_NAME,
+    pc.SECTOR,
+    'Company Description' AS CONTENT_TYPE,
+    pc.SUB_SECTOR,
+    pc.STATUS,
+    pc.HEADQUARTERS
+  FROM TSG_INTELLIGENCE.ANALYTICS.PORTFOLIO_COMPANIES pc
+
+  UNION ALL
+
+  SELECT
+    id.NOTES AS SEARCH_CONTENT,
+    pc.COMPANY_NAME,
+    pc.SECTOR,
+    'Deal Notes' AS CONTENT_TYPE,
+    pc.SUB_SECTOR,
+    pc.STATUS,
+    pc.HEADQUARTERS
+  FROM TSG_INTELLIGENCE.ANALYTICS.INVESTMENT_DEALS id
+  JOIN TSG_INTELLIGENCE.ANALYTICS.PORTFOLIO_COMPANIES pc
+    ON id.COMPANY_ID = pc.COMPANY_ID
+  WHERE id.NOTES IS NOT NULL
+);
