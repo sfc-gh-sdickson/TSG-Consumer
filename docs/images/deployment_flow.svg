@@ -1,106 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="Segoe UI, Arial, sans-serif">
   <defs>
-    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f1b2d;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#1a2940;stop-opacity:1"/>
-    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="shadowSm">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
     <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#29b5e8"/>
     </marker>
-    <filter id="sh2">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
-  <rect width="1100" height="750" fill="url(#bg2)"/>
-  <text x="550" y="40" text-anchor="middle" fill="#29b5e8" font-size="24" font-weight="bold">TSG Consumer — Deployment Workflow</text>
+  <rect width="1100" height="750" fill="#ffffff"/>
+  <text x="550" y="40" text-anchor="middle" fill="#1a2940" font-size="24" font-weight="bold">TSG Consumer - Deployment Workflow</text>
   <line x1="200" y1="52" x2="900" y2="52" stroke="#29b5e8" stroke-width="1" opacity="0.4"/>
 
-  <rect x="50" y="80" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#29b5e8" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="50" y="80" width="200" height="70" rx="10" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="110" text-anchor="middle" fill="#29b5e8" font-size="13" font-weight="bold">Step 1</text>
-  <text x="150" y="130" text-anchor="middle" fill="#ecf0f1" font-size="11">Database &amp; Schemas</text>
-  <text x="150" y="144" text-anchor="middle" fill="#7f8c8d" font-size="9">01_database_and_schema.sql</text>
+  <text x="150" y="130" text-anchor="middle" fill="#2c3e50" font-size="11">Database and Schemas</text>
+  <text x="150" y="144" text-anchor="middle" fill="#95a5a6" font-size="9">01_database_and_schema.sql</text>
 
-  <rect x="290" y="80" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#2ecc71" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="290" y="80" width="200" height="70" rx="10" fill="#f0faf4" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
   <text x="390" y="110" text-anchor="middle" fill="#2ecc71" font-size="13" font-weight="bold">Step 2</text>
-  <text x="390" y="130" text-anchor="middle" fill="#ecf0f1" font-size="11">Create Tables</text>
-  <text x="390" y="144" text-anchor="middle" fill="#7f8c8d" font-size="9">02_create_tables.sql</text>
+  <text x="390" y="130" text-anchor="middle" fill="#2c3e50" font-size="11">Create Tables</text>
+  <text x="390" y="144" text-anchor="middle" fill="#95a5a6" font-size="9">02_create_tables.sql</text>
 
-  <rect x="530" y="80" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#f39c12" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="530" y="80" width="200" height="70" rx="10" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="110" text-anchor="middle" fill="#f39c12" font-size="13" font-weight="bold">Step 3</text>
-  <text x="630" y="130" text-anchor="middle" fill="#ecf0f1" font-size="11">Synthetic Data</text>
-  <text x="630" y="144" text-anchor="middle" fill="#7f8c8d" font-size="9">03_generate_synthetic_data.sql</text>
+  <text x="630" y="130" text-anchor="middle" fill="#2c3e50" font-size="11">Synthetic Data</text>
+  <text x="630" y="144" text-anchor="middle" fill="#95a5a6" font-size="9">03_generate_synthetic_data.sql</text>
 
   <line x1="250" y1="115" x2="290" y2="115" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
   <line x1="490" y1="115" x2="530" y2="115" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
   <line x1="730" y1="115" x2="770" y2="115" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="770" y="80" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#9b59b6" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="770" y="80" width="200" height="70" rx="10" fill="#f5f0fa" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="110" text-anchor="middle" fill="#9b59b6" font-size="13" font-weight="bold">Step 4</text>
-  <text x="870" y="130" text-anchor="middle" fill="#ecf0f1" font-size="11">Analytical Views</text>
-  <text x="870" y="144" text-anchor="middle" fill="#7f8c8d" font-size="9">04_create_views.sql</text>
+  <text x="870" y="130" text-anchor="middle" fill="#2c3e50" font-size="11">Analytical Views</text>
+  <text x="870" y="144" text-anchor="middle" fill="#95a5a6" font-size="9">04_create_views.sql</text>
 
   <line x1="870" y1="150" x2="870" y2="200" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="770" y="200" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#e74c3c" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="770" y="200" width="200" height="70" rx="10" fill="#fde8e8" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="230" text-anchor="middle" fill="#e74c3c" font-size="13" font-weight="bold">Step 5</text>
-  <text x="870" y="250" text-anchor="middle" fill="#ecf0f1" font-size="11">Semantic Views</text>
-  <text x="870" y="264" text-anchor="middle" fill="#7f8c8d" font-size="9">05_create_semantic_views.sql</text>
+  <text x="870" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">Semantic Views</text>
+  <text x="870" y="264" text-anchor="middle" fill="#95a5a6" font-size="9">05_create_semantic_views.sql</text>
 
   <line x1="770" y1="235" x2="730" y2="235" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="530" y="200" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#1abc9c" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="530" y="200" width="200" height="70" rx="10" fill="#e8f8f0" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="230" text-anchor="middle" fill="#1abc9c" font-size="13" font-weight="bold">Step 6</text>
-  <text x="630" y="250" text-anchor="middle" fill="#ecf0f1" font-size="11">Cortex Search</text>
-  <text x="630" y="264" text-anchor="middle" fill="#7f8c8d" font-size="9">06_create_cortex_search.sql</text>
+  <text x="630" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">Cortex Search</text>
+  <text x="630" y="264" text-anchor="middle" fill="#95a5a6" font-size="9">06_create_cortex_search.sql</text>
 
   <line x1="530" y1="235" x2="490" y2="235" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="290" y="200" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#3498db" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="290" y="200" width="200" height="70" rx="10" fill="#f0f7fc" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
   <text x="390" y="230" text-anchor="middle" fill="#3498db" font-size="13" font-weight="bold">Step 7</text>
-  <text x="390" y="250" text-anchor="middle" fill="#ecf0f1" font-size="11">ML Model Training</text>
-  <text x="390" y="264" text-anchor="middle" fill="#7f8c8d" font-size="9">07_ml_models.ipynb</text>
+  <text x="390" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">ML Model Training</text>
+  <text x="390" y="264" text-anchor="middle" fill="#95a5a6" font-size="9">07_ml_models.ipynb</text>
 
   <line x1="290" y1="235" x2="250" y2="235" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="50" y="200" width="200" height="70" rx="10" fill="#1e3a5f" stroke="#f39c12" stroke-width="2" filter="url(#sh2)"/>
+  <rect x="50" y="200" width="200" height="70" rx="10" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="230" text-anchor="middle" fill="#f39c12" font-size="13" font-weight="bold">Step 8</text>
-  <text x="150" y="250" text-anchor="middle" fill="#ecf0f1" font-size="11">ML Functions &amp; UDFs</text>
-  <text x="150" y="264" text-anchor="middle" fill="#7f8c8d" font-size="9">08_ml_model_functions.sql</text>
+  <text x="150" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">ML Functions and UDFs</text>
+  <text x="150" y="264" text-anchor="middle" fill="#95a5a6" font-size="9">08_ml_model_functions.sql</text>
 
   <line x1="150" y1="270" x2="150" y2="320" stroke="#29b5e8" stroke-width="2" marker-end="url(#arr)"/>
 
-  <rect x="50" y="320" width="200" height="70" rx="10" fill="#162d50" stroke="#29b5e8" stroke-width="3" filter="url(#sh2)"/>
+  <rect x="50" y="320" width="200" height="70" rx="10" fill="#e8f4fd" stroke="#29b5e8" stroke-width="3" filter="url(#shadow)"/>
   <text x="150" y="350" text-anchor="middle" fill="#29b5e8" font-size="13" font-weight="bold">Step 9</text>
-  <text x="150" y="370" text-anchor="middle" fill="#ecf0f1" font-size="11">Create TSG Agent</text>
-  <text x="150" y="384" text-anchor="middle" fill="#7f8c8d" font-size="9">09_create_financial_agent.sql</text>
+  <text x="150" y="370" text-anchor="middle" fill="#2c3e50" font-size="11">Create TSG Agent</text>
+  <text x="150" y="384" text-anchor="middle" fill="#95a5a6" font-size="9">09_create_financial_agent.sql</text>
 
-  <rect x="50" y="440" width="1000" height="280" rx="12" fill="#162d50" stroke="#29b5e8" stroke-width="2" filter="url(#sh2)"/>
-  <text x="550" y="470" text-anchor="middle" fill="#29b5e8" font-size="18" font-weight="bold">Component Details</text>
+  <rect x="50" y="440" width="1000" height="280" rx="12" fill="#f8f9fa" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="550" y="470" text-anchor="middle" fill="#1a2940" font-size="18" font-weight="bold">Component Details</text>
 
-  <rect x="80" y="490" width="280" height="100" rx="8" fill="#0d2137" stroke="#29b5e8" stroke-width="1"/>
+  <rect x="80" y="490" width="280" height="100" rx="8" fill="#f0f7fc" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="220" y="515" text-anchor="middle" fill="#29b5e8" font-size="12" font-weight="bold">Tables Created</text>
-  <text x="220" y="535" text-anchor="middle" fill="#ecf0f1" font-size="10">PORTFOLIO_COMPANIES • BRAND_METRICS</text>
-  <text x="220" y="550" text-anchor="middle" fill="#ecf0f1" font-size="10">REVENUE_DATA • DIGITAL_ANALYTICS</text>
-  <text x="220" y="565" text-anchor="middle" fill="#ecf0f1" font-size="10">MARKET_RESEARCH • CHANNEL_PERFORMANCE</text>
-  <text x="220" y="580" text-anchor="middle" fill="#ecf0f1" font-size="10">OPERATIONS_METRICS • INVESTMENT_DEALS</text>
+  <text x="220" y="535" text-anchor="middle" fill="#2c3e50" font-size="10">PORTFOLIO_COMPANIES - BRAND_METRICS</text>
+  <text x="220" y="550" text-anchor="middle" fill="#2c3e50" font-size="10">REVENUE_DATA - DIGITAL_ANALYTICS</text>
+  <text x="220" y="565" text-anchor="middle" fill="#2c3e50" font-size="10">MARKET_RESEARCH - CHANNEL_PERFORMANCE</text>
+  <text x="220" y="580" text-anchor="middle" fill="#2c3e50" font-size="10">OPERATIONS_METRICS - INVESTMENT_DEALS</text>
 
-  <rect x="410" y="490" width="280" height="100" rx="8" fill="#0d2137" stroke="#2ecc71" stroke-width="1"/>
+  <rect x="410" y="490" width="280" height="100" rx="8" fill="#f0faf4" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="550" y="515" text-anchor="middle" fill="#2ecc71" font-size="12" font-weight="bold">Semantic Views</text>
-  <text x="550" y="535" text-anchor="middle" fill="#ecf0f1" font-size="10">SV_PORTFOLIO_PERFORMANCE</text>
-  <text x="550" y="550" text-anchor="middle" fill="#ecf0f1" font-size="10">SV_BRAND_ANALYTICS</text>
-  <text x="550" y="565" text-anchor="middle" fill="#ecf0f1" font-size="10">SV_REVENUE_GROWTH</text>
-  <text x="550" y="580" text-anchor="middle" fill="#ecf0f1" font-size="10">SV_ECOMMERCE_DIGITAL</text>
+  <text x="550" y="535" text-anchor="middle" fill="#2c3e50" font-size="10">SV_PORTFOLIO_PERFORMANCE</text>
+  <text x="550" y="550" text-anchor="middle" fill="#2c3e50" font-size="10">SV_BRAND_ANALYTICS</text>
+  <text x="550" y="565" text-anchor="middle" fill="#2c3e50" font-size="10">SV_REVENUE_GROWTH</text>
+  <text x="550" y="580" text-anchor="middle" fill="#2c3e50" font-size="10">SV_ECOMMERCE_DIGITAL</text>
 
-  <rect x="740" y="490" width="280" height="100" rx="8" fill="#0d2137" stroke="#f39c12" stroke-width="1"/>
+  <rect x="740" y="490" width="280" height="100" rx="8" fill="#fef9f0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="880" y="515" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Agent Tools</text>
-  <text x="880" y="535" text-anchor="middle" fill="#ecf0f1" font-size="10">5 Cortex Analyst (Semantic Views)</text>
-  <text x="880" y="550" text-anchor="middle" fill="#ecf0f1" font-size="10">3 Cortex Search Services</text>
-  <text x="880" y="565" text-anchor="middle" fill="#ecf0f1" font-size="10">4 Generic UDF Functions</text>
-  <text x="880" y="580" text-anchor="middle" fill="#ecf0f1" font-size="10">Budget: 60s / 32K tokens</text>
+  <text x="880" y="535" text-anchor="middle" fill="#2c3e50" font-size="10">5 Cortex Analyst (Semantic Views)</text>
+  <text x="880" y="550" text-anchor="middle" fill="#2c3e50" font-size="10">3 Cortex Search Services</text>
+  <text x="880" y="565" text-anchor="middle" fill="#2c3e50" font-size="10">4 Generic UDF Functions</text>
+  <text x="880" y="580" text-anchor="middle" fill="#2c3e50" font-size="10">Budget: 60s / 32K tokens</text>
 
-  <rect x="80" y="600" width="940" height="30" rx="6" fill="#0d2137" stroke="#1abc9c" stroke-width="1"/>
-  <text x="550" y="620" text-anchor="middle" fill="#1abc9c" font-size="11">Deployment Target: TSG_INTELLIGENCE.ANALYTICS • Warehouse: TSG_WH • Role: ACCOUNTADMIN</text>
+  <rect x="80" y="600" width="940" height="30" rx="6" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="550" y="620" text-anchor="middle" fill="#1abc9c" font-size="11">Deployment Target: TSG_INTELLIGENCE.ANALYTICS - Warehouse: TSG_WH - Role: ACCOUNTADMIN</text>
 
-  <text x="550" y="740" text-anchor="middle" fill="#5d6d7e" font-size="11">TSG Consumer Partners — Deployment Flow v1.0 — March 2026</text>
+  <text x="550" y="740" text-anchor="middle" fill="#95a5a6" font-size="11">TSG Consumer Partners - Deployment Flow v1.0 - March 2026</text>
 </svg>

@@ -1,127 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800" font-family="Segoe UI, Arial, sans-serif">
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f1b2d;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#1a2940;stop-opacity:1"/>
-    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="shadowSm">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
     <marker id="a3" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#29b5e8"/>
     </marker>
-    <filter id="sh3">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
-  <rect width="1100" height="800" fill="url(#bg3)"/>
-  <text x="550" y="40" text-anchor="middle" fill="#29b5e8" font-size="24" font-weight="bold">TSG Consumer — ML Pipeline &amp; Model Architecture</text>
+  <rect width="1100" height="800" fill="#ffffff"/>
+  <text x="550" y="40" text-anchor="middle" fill="#1a2940" font-size="24" font-weight="bold">TSG Consumer - ML Pipeline and Model Architecture</text>
   <line x1="200" y1="52" x2="900" y2="52" stroke="#29b5e8" stroke-width="1" opacity="0.4"/>
 
-  <rect x="50" y="80" width="1000" height="130" rx="12" fill="#1e3a5f" stroke="#f39c12" stroke-width="2" filter="url(#sh3)"/>
+  <rect x="50" y="80" width="1000" height="130" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
   <text x="550" y="108" text-anchor="middle" fill="#f39c12" font-size="16" font-weight="bold">Feature Engineering Pipeline</text>
 
-  <rect x="70" y="120" width="180" height="70" rx="8" fill="#0d2137" stroke="#f39c12" stroke-width="1"/>
-  <text x="160" y="148" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Raw Data</text>
-  <text x="160" y="168" text-anchor="middle" fill="#8e9aaf" font-size="10">Portfolio &amp; Revenue</text>
-  <text x="160" y="182" text-anchor="middle" fill="#8e9aaf" font-size="10">Brand &amp; Digital Metrics</text>
+  <rect x="70" y="120" width="180" height="70" rx="8" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="160" y="148" text-anchor="middle" fill="#e67e22" font-size="12" font-weight="bold">Raw Data</text>
+  <text x="160" y="168" text-anchor="middle" fill="#7f8c8d" font-size="10">Portfolio and Revenue</text>
+  <text x="160" y="182" text-anchor="middle" fill="#7f8c8d" font-size="10">Brand and Digital Metrics</text>
 
-  <rect x="290" y="120" width="180" height="70" rx="8" fill="#0d2137" stroke="#e67e22" stroke-width="1"/>
+  <rect x="290" y="120" width="180" height="70" rx="8" fill="#fdf3e0" stroke="#e67e22" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="380" y="148" text-anchor="middle" fill="#e67e22" font-size="12" font-weight="bold">Feature Store</text>
-  <text x="380" y="168" text-anchor="middle" fill="#8e9aaf" font-size="10">Aggregated KPIs</text>
-  <text x="380" y="182" text-anchor="middle" fill="#8e9aaf" font-size="10">Growth Calculations</text>
+  <text x="380" y="168" text-anchor="middle" fill="#7f8c8d" font-size="10">Aggregated KPIs</text>
+  <text x="380" y="182" text-anchor="middle" fill="#7f8c8d" font-size="10">Growth Calculations</text>
 
-  <rect x="510" y="120" width="180" height="70" rx="8" fill="#0d2137" stroke="#d35400" stroke-width="1"/>
+  <rect x="510" y="120" width="180" height="70" rx="8" fill="#fdf3e0" stroke="#d35400" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="600" y="148" text-anchor="middle" fill="#d35400" font-size="12" font-weight="bold">Normalization</text>
-  <text x="600" y="168" text-anchor="middle" fill="#8e9aaf" font-size="10">Scaling &amp; Encoding</text>
-  <text x="600" y="182" text-anchor="middle" fill="#8e9aaf" font-size="10">Missing Value Handling</text>
+  <text x="600" y="168" text-anchor="middle" fill="#7f8c8d" font-size="10">Scaling and Encoding</text>
+  <text x="600" y="182" text-anchor="middle" fill="#7f8c8d" font-size="10">Missing Value Handling</text>
 
-  <rect x="730" y="120" width="180" height="70" rx="8" fill="#0d2137" stroke="#c0392b" stroke-width="1"/>
+  <rect x="730" y="120" width="180" height="70" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="1" filter="url(#shadowSm)"/>
   <text x="820" y="148" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="bold">Train/Test Split</text>
-  <text x="820" y="168" text-anchor="middle" fill="#8e9aaf" font-size="10">80/20 Split</text>
-  <text x="820" y="182" text-anchor="middle" fill="#8e9aaf" font-size="10">Time-Based Validation</text>
+  <text x="820" y="168" text-anchor="middle" fill="#7f8c8d" font-size="10">75/25 Split</text>
+  <text x="820" y="182" text-anchor="middle" fill="#7f8c8d" font-size="10">Stratified Validation</text>
 
   <line x1="250" y1="155" x2="290" y2="155" stroke="#f39c12" stroke-width="2" marker-end="url(#a3)"/>
   <line x1="470" y1="155" x2="510" y2="155" stroke="#f39c12" stroke-width="2" marker-end="url(#a3)"/>
   <line x1="690" y1="155" x2="730" y2="155" stroke="#f39c12" stroke-width="2" marker-end="url(#a3)"/>
 
-  <rect x="50" y="240" width="240" height="200" rx="12" fill="#1e3a5f" stroke="#29b5e8" stroke-width="2" filter="url(#sh3)"/>
+  <rect x="50" y="240" width="240" height="200" rx="12" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="270" text-anchor="middle" fill="#29b5e8" font-size="14" font-weight="bold">Brand LTV Model</text>
-  <text x="170" y="290" text-anchor="middle" fill="#8e9aaf" font-size="10">XGBoost Regressor</text>
-  <rect x="70" y="305" width="200" height="24" rx="4" fill="#0d2137" stroke="#29b5e8" stroke-width="1"/>
-  <text x="170" y="321" text-anchor="middle" fill="#ecf0f1" font-size="10">Revenue History</text>
-  <rect x="70" y="335" width="200" height="24" rx="4" fill="#0d2137" stroke="#29b5e8" stroke-width="1"/>
-  <text x="170" y="351" text-anchor="middle" fill="#ecf0f1" font-size="10">Brand Health Score</text>
-  <rect x="70" y="365" width="200" height="24" rx="4" fill="#0d2137" stroke="#29b5e8" stroke-width="1"/>
-  <text x="170" y="381" text-anchor="middle" fill="#ecf0f1" font-size="10">Market Share Growth</text>
-  <rect x="70" y="400" width="200" height="24" rx="4" fill="#0d2137" stroke="#1abc9c" stroke-width="1"/>
-  <text x="170" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">R² = 0.87 | MAE = $2.1M</text>
+  <text x="170" y="290" text-anchor="middle" fill="#7f8c8d" font-size="10">RandomForest Regressor</text>
+  <rect x="70" y="305" width="200" height="24" rx="4" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="170" y="321" text-anchor="middle" fill="#2c3e50" font-size="10">Revenue History</text>
+  <rect x="70" y="335" width="200" height="24" rx="4" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="170" y="351" text-anchor="middle" fill="#2c3e50" font-size="10">Brand Health Score</text>
+  <rect x="70" y="365" width="200" height="24" rx="4" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="170" y="381" text-anchor="middle" fill="#2c3e50" font-size="10">Market Share Growth</text>
+  <rect x="70" y="400" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="170" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">R2 = 0.75 | MAE = 28.9</text>
 
-  <rect x="320" y="240" width="240" height="200" rx="12" fill="#1e3a5f" stroke="#2ecc71" stroke-width="2" filter="url(#sh3)"/>
+  <rect x="320" y="240" width="240" height="200" rx="12" fill="#f0faf4" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
   <text x="440" y="270" text-anchor="middle" fill="#2ecc71" font-size="14" font-weight="bold">Churn Risk Model</text>
-  <text x="440" y="290" text-anchor="middle" fill="#8e9aaf" font-size="10">Random Forest Classifier</text>
-  <rect x="340" y="305" width="200" height="24" rx="4" fill="#0d2137" stroke="#2ecc71" stroke-width="1"/>
-  <text x="440" y="321" text-anchor="middle" fill="#ecf0f1" font-size="10">Customer Engagement</text>
-  <rect x="340" y="335" width="200" height="24" rx="4" fill="#0d2137" stroke="#2ecc71" stroke-width="1"/>
-  <text x="440" y="351" text-anchor="middle" fill="#ecf0f1" font-size="10">Revenue Trend</text>
-  <rect x="340" y="365" width="200" height="24" rx="4" fill="#0d2137" stroke="#2ecc71" stroke-width="1"/>
-  <text x="440" y="381" text-anchor="middle" fill="#ecf0f1" font-size="10">Satisfaction Scores</text>
-  <rect x="340" y="400" width="200" height="24" rx="4" fill="#0d2137" stroke="#1abc9c" stroke-width="1"/>
-  <text x="440" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">AUC = 0.92 | F1 = 0.88</text>
+  <text x="440" y="290" text-anchor="middle" fill="#7f8c8d" font-size="10">RandomForest Classifier</text>
+  <rect x="340" y="305" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="440" y="321" text-anchor="middle" fill="#2c3e50" font-size="10">Customer Engagement</text>
+  <rect x="340" y="335" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="440" y="351" text-anchor="middle" fill="#2c3e50" font-size="10">Revenue Trend</text>
+  <rect x="340" y="365" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="440" y="381" text-anchor="middle" fill="#2c3e50" font-size="10">Satisfaction Scores</text>
+  <rect x="340" y="400" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="440" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">5 High / 7 Low Classification</text>
 
-  <rect x="590" y="240" width="240" height="200" rx="12" fill="#1e3a5f" stroke="#9b59b6" stroke-width="2" filter="url(#sh3)"/>
+  <rect x="590" y="240" width="240" height="200" rx="12" fill="#f5f0fa" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
   <text x="710" y="270" text-anchor="middle" fill="#9b59b6" font-size="14" font-weight="bold">Revenue Forecast</text>
-  <text x="710" y="290" text-anchor="middle" fill="#8e9aaf" font-size="10">Time Series (ARIMA/Prophet)</text>
-  <rect x="610" y="305" width="200" height="24" rx="4" fill="#0d2137" stroke="#9b59b6" stroke-width="1"/>
-  <text x="710" y="321" text-anchor="middle" fill="#ecf0f1" font-size="10">Historical Revenue</text>
-  <rect x="610" y="335" width="200" height="24" rx="4" fill="#0d2137" stroke="#9b59b6" stroke-width="1"/>
-  <text x="710" y="351" text-anchor="middle" fill="#ecf0f1" font-size="10">Seasonality Patterns</text>
-  <rect x="610" y="365" width="200" height="24" rx="4" fill="#0d2137" stroke="#9b59b6" stroke-width="1"/>
-  <text x="710" y="381" text-anchor="middle" fill="#ecf0f1" font-size="10">Market Indicators</text>
-  <rect x="610" y="400" width="200" height="24" rx="4" fill="#0d2137" stroke="#1abc9c" stroke-width="1"/>
-  <text x="710" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">MAPE = 8.3% | R² = 0.91</text>
+  <text x="710" y="290" text-anchor="middle" fill="#7f8c8d" font-size="10">GradientBoosting Regressor</text>
+  <rect x="610" y="305" width="200" height="24" rx="4" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="710" y="321" text-anchor="middle" fill="#2c3e50" font-size="10">Historical Revenue</text>
+  <rect x="610" y="335" width="200" height="24" rx="4" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="710" y="351" text-anchor="middle" fill="#2c3e50" font-size="10">Market Growth Rates</text>
+  <rect x="610" y="365" width="200" height="24" rx="4" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="710" y="381" text-anchor="middle" fill="#2c3e50" font-size="10">Brand Momentum</text>
+  <rect x="610" y="400" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="710" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">11.7% - 14.0% Range</text>
 
-  <rect x="860" y="240" width="240" height="200" rx="12" fill="#1e3a5f" stroke="#f39c12" stroke-width="2" filter="url(#sh3)"/>
+  <rect x="860" y="240" width="240" height="200" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
   <text x="980" y="270" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">Market Opportunity</text>
-  <text x="980" y="290" text-anchor="middle" fill="#8e9aaf" font-size="10">Gradient Boosting Scorer</text>
-  <rect x="880" y="305" width="200" height="24" rx="4" fill="#0d2137" stroke="#f39c12" stroke-width="1"/>
-  <text x="980" y="321" text-anchor="middle" fill="#ecf0f1" font-size="10">Market Size &amp; TAM</text>
-  <rect x="880" y="335" width="200" height="24" rx="4" fill="#0d2137" stroke="#f39c12" stroke-width="1"/>
-  <text x="980" y="351" text-anchor="middle" fill="#ecf0f1" font-size="10">Competitive Landscape</text>
-  <rect x="880" y="365" width="200" height="24" rx="4" fill="#0d2137" stroke="#f39c12" stroke-width="1"/>
-  <text x="980" y="381" text-anchor="middle" fill="#ecf0f1" font-size="10">Consumer Trend Data</text>
-  <rect x="880" y="400" width="200" height="24" rx="4" fill="#0d2137" stroke="#1abc9c" stroke-width="1"/>
-  <text x="980" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">Precision = 0.89 | AUC = 0.94</text>
+  <text x="980" y="290" text-anchor="middle" fill="#7f8c8d" font-size="10">GradientBoosting Scorer</text>
+  <rect x="880" y="305" width="200" height="24" rx="4" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="321" text-anchor="middle" fill="#2c3e50" font-size="10">Market Size and TAM</text>
+  <rect x="880" y="335" width="200" height="24" rx="4" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="351" text-anchor="middle" fill="#2c3e50" font-size="10">Competitive Landscape</text>
+  <rect x="880" y="365" width="200" height="24" rx="4" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="381" text-anchor="middle" fill="#2c3e50" font-size="10">Consumer Trend Data</text>
+  <rect x="880" y="400" width="200" height="24" rx="4" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="416" text-anchor="middle" fill="#1abc9c" font-size="10">64.4 - 100.5 Score Range</text>
 
-  <rect x="50" y="480" width="1000" height="130" rx="12" fill="#1e3a5f" stroke="#1abc9c" stroke-width="2" filter="url(#sh3)"/>
-  <text x="550" y="508" text-anchor="middle" fill="#1abc9c" font-size="16" font-weight="bold">Model Deployment — Snowflake UDFs</text>
+  <rect x="50" y="480" width="1000" height="130" rx="12" fill="#e8f8f0" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="550" y="508" text-anchor="middle" fill="#1abc9c" font-size="16" font-weight="bold">Model Deployment - Snowflake Model Registry + UDFs</text>
 
-  <rect x="70" y="520" width="220" height="70" rx="8" fill="#0d2137" stroke="#29b5e8" stroke-width="1.5"/>
+  <rect x="70" y="520" width="220" height="70" rx="8" fill="#f0f7fc" stroke="#29b5e8" stroke-width="1.5" filter="url(#shadowSm)"/>
   <text x="180" y="545" text-anchor="middle" fill="#29b5e8" font-size="11" font-weight="bold">AGENT_GET_LTV_SCORES()</text>
-  <text x="180" y="565" text-anchor="middle" fill="#8e9aaf" font-size="10">RETURNS ARRAY</text>
-  <text x="180" y="580" text-anchor="middle" fill="#8e9aaf" font-size="10">Top brand LTV predictions</text>
+  <text x="180" y="565" text-anchor="middle" fill="#7f8c8d" font-size="10">RETURNS ARRAY</text>
+  <text x="180" y="580" text-anchor="middle" fill="#7f8c8d" font-size="10">Top brand LTV predictions</text>
 
-  <rect x="310" y="520" width="220" height="70" rx="8" fill="#0d2137" stroke="#2ecc71" stroke-width="1.5"/>
+  <rect x="310" y="520" width="220" height="70" rx="8" fill="#f0faf4" stroke="#2ecc71" stroke-width="1.5" filter="url(#shadowSm)"/>
   <text x="420" y="545" text-anchor="middle" fill="#2ecc71" font-size="11" font-weight="bold">AGENT_GET_CHURN_RISK()</text>
-  <text x="420" y="565" text-anchor="middle" fill="#8e9aaf" font-size="10">RETURNS ARRAY</text>
-  <text x="420" y="580" text-anchor="middle" fill="#8e9aaf" font-size="10">Portfolio churn risk scores</text>
+  <text x="420" y="565" text-anchor="middle" fill="#7f8c8d" font-size="10">RETURNS ARRAY</text>
+  <text x="420" y="580" text-anchor="middle" fill="#7f8c8d" font-size="10">Portfolio churn risk scores</text>
 
-  <rect x="550" y="520" width="220" height="70" rx="8" fill="#0d2137" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="550" y="520" width="220" height="70" rx="8" fill="#f5f0fa" stroke="#9b59b6" stroke-width="1.5" filter="url(#shadowSm)"/>
   <text x="660" y="545" text-anchor="middle" fill="#9b59b6" font-size="11" font-weight="bold">AGENT_GET_FORECASTS()</text>
-  <text x="660" y="565" text-anchor="middle" fill="#8e9aaf" font-size="10">RETURNS ARRAY</text>
-  <text x="660" y="580" text-anchor="middle" fill="#8e9aaf" font-size="10">Revenue growth forecasts</text>
+  <text x="660" y="565" text-anchor="middle" fill="#7f8c8d" font-size="10">RETURNS ARRAY</text>
+  <text x="660" y="580" text-anchor="middle" fill="#7f8c8d" font-size="10">Revenue growth forecasts</text>
 
-  <rect x="790" y="520" width="240" height="70" rx="8" fill="#0d2137" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="790" y="520" width="240" height="70" rx="8" fill="#fef9f0" stroke="#f39c12" stroke-width="1.5" filter="url(#shadowSm)"/>
   <text x="910" y="545" text-anchor="middle" fill="#f39c12" font-size="11" font-weight="bold">AGENT_GET_OPPORTUNITIES()</text>
-  <text x="910" y="565" text-anchor="middle" fill="#8e9aaf" font-size="10">RETURNS ARRAY</text>
-  <text x="910" y="580" text-anchor="middle" fill="#8e9aaf" font-size="10">Market opportunity scores</text>
+  <text x="910" y="565" text-anchor="middle" fill="#7f8c8d" font-size="10">RETURNS ARRAY</text>
+  <text x="910" y="580" text-anchor="middle" fill="#7f8c8d" font-size="10">Market opportunity scores</text>
 
-  <rect x="200" y="650" width="700" height="70" rx="12" fill="#162d50" stroke="#29b5e8" stroke-width="3" filter="url(#sh3)"/>
-  <text x="550" y="680" text-anchor="middle" fill="#29b5e8" font-size="16" font-weight="bold">TSG_AGENT Integration</text>
-  <text x="550" y="700" text-anchor="middle" fill="#8e9aaf" font-size="11">All models exposed as Generic tools via Agent UDF functions</text>
+  <rect x="200" y="650" width="700" height="70" rx="12" fill="#e8f4fd" stroke="#29b5e8" stroke-width="3" filter="url(#shadow)"/>
+  <text x="550" y="680" text-anchor="middle" fill="#1a6fa0" font-size="16" font-weight="bold">TSG_AGENT Integration</text>
+  <text x="550" y="700" text-anchor="middle" fill="#7f8c8d" font-size="11">All models exposed as Generic tools via Agent UDF functions</text>
 
   <line x1="180" y1="590" x2="350" y2="650" stroke="#29b5e8" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="420" y1="590" x2="450" y2="650" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="660" y1="590" x2="650" y2="650" stroke="#9b59b6" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="910" y1="590" x2="750" y2="650" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="5,3"/>
 
-  <text x="550" y="780" text-anchor="middle" fill="#5d6d7e" font-size="11">TSG Consumer Partners — ML Pipeline v1.0 — March 2026</text>
+  <text x="550" y="780" text-anchor="middle" fill="#95a5a6" font-size="11">TSG Consumer Partners - ML Pipeline v1.0 - March 2026</text>
 </svg>
