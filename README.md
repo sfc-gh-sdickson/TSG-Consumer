@@ -66,6 +66,9 @@ Execute scripts in order:
 │   ├── AGENT_SETUP.md              — Step-by-step deployment guide
 │   ├── DEPLOYMENT_SUMMARY.md       — Component inventory and status
 │   ├── questions.md                — 40 test questions for the agent
+│   ├── TSG_Cost_Management_Best_Practices.md  — Cost optimization guide
+│   ├── TSG_API_Integration_Guide.md           — API access for cost data
+│   ├── TSG_Email_Reporting_Setup.md           — Automated email reports
 │   └── images/
 │       ├── architecture.svg        — System architecture diagram
 │       ├── deployment_flow.svg     — Deployment workflow diagram
@@ -94,3 +97,9 @@ Execute scripts in order:
 - [Agent Setup Guide](docs/AGENT_SETUP.md) — Complete deployment instructions
 - [Deployment Summary](docs/DEPLOYMENT_SUMMARY.md) — Component inventory
 - [Test Questions](docs/questions.md) — 40 questions to test the agent
+
+## Cost Management & Operations Guides
+
+- [Cost Management Best Practices](docs/TSG_Cost_Management_Best_Practices.md) — Warehouse strategy, tagging, resource monitors, storage tracking, and AI spend monitoring
+- [API Integration Guide](docs/TSG_API_Integration_Guide.md) — Pulling Snowflake cost data into your monitoring app via REST API, Python connector, JDBC/ODBC, or Snowpark
+- [Email Reporting Setup](docs/TSG_Email_Reporting_Setup.md) — Automated scheduled email cost reports and CoWork dashboard configuration
