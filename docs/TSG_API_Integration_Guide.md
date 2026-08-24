@@ -237,12 +237,4 @@ Here's a suggested JSON schema to unify Snowflake + AWS + OpenAI in your monitor
 
 ---
 
-## Next Steps
-
-1. **Tell me what your monitoring app is built in** — I'll point you to the exact connector and help wire it up
-2. **I'll create the service user and role** in your Snowflake account with the right permissions
-3. **We can test it end-to-end** in a 30-min working session
-
----
-
 *— Stephen Dickson (stephen.dickson@snowflake.com)*
