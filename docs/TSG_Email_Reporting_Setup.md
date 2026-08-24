@@ -120,8 +120,4 @@ Best of both worlds:
 3. **Level of detail** — High-level summary (total spend + top warehouses) or granular (per-project, per-function)?
 4. **CoWork access** — Want me to set up CoWork for you as well?
 
----
 
-*Once you confirm preferences, I can have this running within a day.*
-
-*— Stephen Dickson (stephen.dickson@snowflake.com)*
