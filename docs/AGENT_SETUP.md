@@ -151,10 +151,10 @@ This guide walks through deploying the TSG Intelligence Agent on Snowflake. The 
 After deployment, test the agent with these queries:
 
 1. "Which portfolio companies have the strongest revenue growth?"
-2. "What is PureGlow Beauty's brand health trend?"
+2. "What is Crumbl Cookies' brand health trend?"
 3. "Show me the churn risk scores for all companies"
-4. "What does our market research say about functional beverages?"
-5. "Compare eCommerce conversion rates across the apparel brands"
+4. "What does our market research say about veterinary services?"
+5. "Compare eCommerce conversion rates across the automotive brands"
 
 ## Troubleshooting
 

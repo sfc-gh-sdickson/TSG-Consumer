@@ -17,22 +17,22 @@ This project deploys **TSG_AGENT**, a Cortex Agent that provides:
 
 ## Portfolio
 
-12 active consumer brands totaling $1.045B invested across 7 sectors:
+12 active portfolio companies totaling $2.31B invested across 8 sectors:
 
 | Company | Sector | Investment |
 |---------|--------|------------|
-| BrightLeaf Organics | Food & Beverage | $85M |
-| UrbanPulse Athletics | Apparel & Accessories | $120M |
-| PureGlow Beauty | Health & Beauty | $65M |
-| TailWag Pet Co | Pet Care | $95M |
-| FrostBite Beverages | Food & Beverage | $110M |
-| NestCraft Home | Home & Living | $75M |
-| VitalKids Nutrition | Food & Beverage | $55M |
-| CloudStep Footwear | Apparel & Accessories | $140M |
-| GreenThread Basics | Apparel & Accessories | $45M |
-| SunRise Supplements | Health & Beauty | $90M |
-| WildTrail Outdoors | Outdoor & Recreation | $105M |
-| PixelPlay Interactive | Entertainment | $60M |
+| ATI Restoration | Home Services | $175M |
+| Crumbl Cookies | Food & Beverage | $200M |
+| Thrive Pet Healthcare | Pet Care | $300M |
+| Saltair | Health & Beauty | $50M |
+| Wrench Group | Home Services | $250M |
+| DUDE Wipes | Consumer Products | $100M |
+| Legacy.com | Digital Media | $125M |
+| Mavis Tire | Automotive Services | $450M |
+| Power Stop | Automotive Parts | $130M |
+| Radiance Holdings | Health & Beauty | $180M |
+| Revolut Ltd | Fintech | $150M |
+| Super Star Car Wash | Automotive Services | $200M |
 
 ## Quick Start
 

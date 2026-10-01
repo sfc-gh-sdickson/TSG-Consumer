@@ -88,20 +88,20 @@
 
 | # | Company | Sector | Sub-Sector | Investment |
 |---|---------|--------|------------|------------|
-| 1 | BrightLeaf Organics | Food & Beverage | Organic Foods | $85M |
-| 2 | UrbanPulse Athletics | Apparel & Accessories | Athleisure | $120M |
-| 3 | PureGlow Beauty | Health & Beauty | Clean Beauty | $65M |
-| 4 | TailWag Pet Co | Pet Care | Premium Pet Food | $95M |
-| 5 | FrostBite Beverages | Food & Beverage | Functional Beverages | $110M |
-| 6 | NestCraft Home | Home & Living | Home Decor | $75M |
-| 7 | VitalKids Nutrition | Food & Beverage | Kids Nutrition | $55M |
-| 8 | CloudStep Footwear | Apparel & Accessories | Footwear | $140M |
-| 9 | GreenThread Basics | Apparel & Accessories | Sustainable Fashion | $45M |
-| 10 | SunRise Supplements | Health & Beauty | Dietary Supplements | $90M |
-| 11 | WildTrail Outdoors | Outdoor & Recreation | Outdoor Gear | $105M |
-| 12 | PixelPlay Interactive | Entertainment | Kids Entertainment | $60M |
+| 1 | ATI Restoration | Home Services | Restoration Services | $175M |
+| 2 | Crumbl Cookies | Food & Beverage | Specialty Bakery | $200M |
+| 3 | Thrive Pet Healthcare | Pet Care | Veterinary Services | $300M |
+| 4 | Saltair | Health & Beauty | Personal Care | $50M |
+| 5 | Wrench Group | Home Services | HVAC & Plumbing | $250M |
+| 6 | DUDE Wipes | Consumer Products | Personal Hygiene | $100M |
+| 7 | Legacy.com | Digital Media | Online Memorials | $125M |
+| 8 | Mavis Tire | Automotive Services | Tire & Auto Service | $450M |
+| 9 | Power Stop | Automotive Parts | Performance Brakes | $130M |
+| 10 | Radiance Holdings | Health & Beauty | Med Spa & Aesthetics | $180M |
+| 11 | Revolut Ltd | Fintech | Digital Banking | $150M |
+| 12 | Super Star Car Wash | Automotive Services | Car Wash | $200M |
 
-**Total Portfolio Investment: $1.045B across 12 companies in 7 sectors**
+**Total Portfolio Investment: $2.31B across 12 companies in 8 sectors**
 
 ## Deployment Script Execution Order
 
