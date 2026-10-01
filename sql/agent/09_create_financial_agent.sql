@@ -132,14 +132,29 @@ CREATE OR REPLACE AGENT TSG_INTELLIGENCE.AGENT.TSG_AGENT
   tool_resources:
     portfolio_performance_analyst:
       semantic_view: "TSG_INTELLIGENCE.ANALYTICS.SV_PORTFOLIO_PERFORMANCE"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "TSG_WH"
     brand_analytics_analyst:
       semantic_view: "TSG_INTELLIGENCE.ANALYTICS.SV_BRAND_ANALYTICS"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "TSG_WH"
     revenue_growth_analyst:
       semantic_view: "TSG_INTELLIGENCE.ANALYTICS.SV_REVENUE_GROWTH"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "TSG_WH"
     ecommerce_digital_analyst:
       semantic_view: "TSG_INTELLIGENCE.ANALYTICS.SV_ECOMMERCE_DIGITAL"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "TSG_WH"
     operational_efficiency_analyst:
       semantic_view: "TSG_INTELLIGENCE.ANALYTICS.SV_OPERATIONAL_EFFICIENCY"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "TSG_WH"
     brand_strategy_search:
       search_service: "TSG_INTELLIGENCE.ANALYTICS.BRAND_STRATEGY_SEARCH"
       max_results: "5"
