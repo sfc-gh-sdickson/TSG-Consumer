@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Segoe UI, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1150" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <filter id="shadow">
       <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
@@ -6,135 +6,222 @@
     <filter id="shadowSm">
       <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
     </filter>
+    <filter id="shadowLg">
+      <feDropShadow dx="3" dy="4" stdDeviation="6" flood-opacity="0.18"/>
+    </filter>
     <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#29b5e8"/>
     </marker>
     <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"/>
     </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+    <marker id="arrowUp" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
   </defs>
 
-  <rect width="1200" height="900" fill="#ffffff"/>
+  <!-- Background -->
+  <rect width="1200" height="1150" fill="#ffffff"/>
 
-  <text x="600" y="45" text-anchor="middle" fill="#1a2940" font-size="28" font-weight="bold">TSG Consumer Partners - Snowflake Intelligence Architecture</text>
-  <line x1="200" y1="55" x2="1000" y2="55" stroke="#29b5e8" stroke-width="1" opacity="0.5"/>
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" fill="#1a2940" font-size="26" font-weight="bold">TSG Consumer Partners — Snowflake Intelligence Architecture</text>
+  <line x1="200" y1="50" x2="1000" y2="50" stroke="#29b5e8" stroke-width="1" opacity="0.5"/>
 
-  <rect x="30" y="80" width="250" height="200" rx="12" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
-  <text x="155" y="108" text-anchor="middle" fill="#29b5e8" font-size="16" font-weight="bold">Data Sources</text>
-  <rect x="50" y="120" width="210" height="30" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="155" y="140" text-anchor="middle" fill="#2c3e50" font-size="12">Portfolio Companies CRM</text>
-  <rect x="50" y="158" width="210" height="30" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="155" y="178" text-anchor="middle" fill="#2c3e50" font-size="12">Market Research and Insights</text>
-  <rect x="50" y="196" width="210" height="30" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="155" y="216" text-anchor="middle" fill="#2c3e50" font-size="12">Financial and Revenue Data</text>
-  <rect x="50" y="234" width="210" height="30" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="155" y="254" text-anchor="middle" fill="#2c3e50" font-size="12">Digital and eCommerce Analytics</text>
+  <!-- ============================================================ -->
+  <!-- ROW 1: TSG_AGENT (Hero Box at Top)                           -->
+  <!-- ============================================================ -->
+  <rect x="100" y="70" width="1000" height="155" rx="16" fill="#e8f4fd" stroke="#29b5e8" stroke-width="3" filter="url(#shadowLg)"/>
+  <rect x="120" y="78" width="960" height="32" rx="8" fill="#29b5e8" opacity="0.12"/>
+  <text x="600" y="100" text-anchor="middle" fill="#1a6fa0" font-size="20" font-weight="bold">TSG_AGENT — Snowflake Intelligence Agent</text>
 
-  <rect x="340" y="80" width="240" height="200" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
-  <text x="460" y="108" text-anchor="middle" fill="#f39c12" font-size="16" font-weight="bold">Ingestion Layer</text>
-  <rect x="355" y="120" width="210" height="30" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="460" y="140" text-anchor="middle" fill="#2c3e50" font-size="12">Snowpipe Streaming</text>
-  <rect x="355" y="158" width="210" height="30" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="460" y="178" text-anchor="middle" fill="#2c3e50" font-size="12">Dynamic Tables (CDC)</text>
-  <rect x="355" y="196" width="210" height="30" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="460" y="216" text-anchor="middle" fill="#2c3e50" font-size="12">Scheduled Tasks</text>
-  <rect x="355" y="234" width="210" height="30" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="460" y="254" text-anchor="middle" fill="#2c3e50" font-size="12">External API Connectors</text>
+  <rect x="130" y="120" width="210" height="46" rx="8" fill="#f0f7fc" stroke="#29b5e8" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="235" y="140" text-anchor="middle" fill="#29b5e8" font-size="11" font-weight="bold">Orchestration</text>
+  <text x="235" y="155" text-anchor="middle" fill="#7f8c8d" font-size="10">Auto Model Routing</text>
 
-  <rect x="640" y="80" width="240" height="200" rx="12" fill="#f0faf4" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
-  <text x="760" y="108" text-anchor="middle" fill="#2ecc71" font-size="16" font-weight="bold">Storage Layer</text>
-  <text x="760" y="130" text-anchor="middle" fill="#7f8c8d" font-size="11">TSG_INTELLIGENCE Database</text>
-  <rect x="655" y="142" width="210" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="760" y="160" text-anchor="middle" fill="#2c3e50" font-size="12">RAW Schema</text>
-  <rect x="655" y="174" width="210" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="760" y="192" text-anchor="middle" fill="#2c3e50" font-size="12">ANALYTICS Schema</text>
-  <rect x="655" y="206" width="210" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="760" y="224" text-anchor="middle" fill="#2c3e50" font-size="12">Portfolio Tables</text>
-  <rect x="655" y="238" width="210" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="760" y="256" text-anchor="middle" fill="#2c3e50" font-size="12">Brand and Revenue Tables</text>
+  <rect x="360" y="120" width="210" height="46" rx="8" fill="#f0faf4" stroke="#2ecc71" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="465" y="140" text-anchor="middle" fill="#2ecc71" font-size="11" font-weight="bold">Tool Router</text>
+  <text x="465" y="155" text-anchor="middle" fill="#7f8c8d" font-size="10">Analyst + Search + UDFs</text>
 
-  <rect x="940" y="80" width="230" height="200" rx="12" fill="#f5f0fa" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="108" text-anchor="middle" fill="#9b59b6" font-size="16" font-weight="bold">Compute Layer</text>
-  <rect x="955" y="125" width="200" height="30" rx="6" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="1055" y="145" text-anchor="middle" fill="#2c3e50" font-size="12">TSG_WH (X-Small)</text>
-  <rect x="955" y="163" width="200" height="30" rx="6" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="1055" y="183" text-anchor="middle" fill="#2c3e50" font-size="12">ML Training Warehouse</text>
-  <rect x="955" y="201" width="200" height="30" rx="6" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="1055" y="221" text-anchor="middle" fill="#2c3e50" font-size="12">Cortex AI Services</text>
-  <rect x="955" y="239" width="200" height="30" rx="6" fill="#ede7f6" stroke="#9b59b6" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="1055" y="259" text-anchor="middle" fill="#2c3e50" font-size="12">Serverless Functions</text>
+  <rect x="590" y="120" width="210" height="46" rx="8" fill="#fef9f0" stroke="#f39c12" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="695" y="140" text-anchor="middle" fill="#f39c12" font-size="11" font-weight="bold">Response Engine</text>
+  <text x="695" y="155" text-anchor="middle" fill="#7f8c8d" font-size="10">Context-Aware Output</text>
 
-  <line x1="280" y1="180" x2="340" y2="180" stroke="#29b5e8" stroke-width="2" marker-end="url(#arrowBlue)"/>
-  <line x1="580" y1="180" x2="640" y2="180" stroke="#2ecc71" stroke-width="2" marker-end="url(#arrowGreen)"/>
-  <line x1="880" y1="180" x2="940" y2="180" stroke="#29b5e8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <rect x="820" y="120" width="250" height="46" rx="8" fill="#f5f0fa" stroke="#9b59b6" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="945" y="140" text-anchor="middle" fill="#9b59b6" font-size="11" font-weight="bold">Budget Control</text>
+  <text x="945" y="155" text-anchor="middle" fill="#7f8c8d" font-size="10">60s / 32K tokens</text>
 
-  <rect x="30" y="320" width="350" height="240" rx="12" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
-  <text x="205" y="348" text-anchor="middle" fill="#29b5e8" font-size="16" font-weight="bold">Cortex Analyst (Text-to-SQL)</text>
-  <rect x="50" y="365" width="310" height="28" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="205" y="384" text-anchor="middle" fill="#2c3e50" font-size="12">Portfolio Performance Semantic View</text>
-  <rect x="50" y="400" width="310" height="28" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="205" y="419" text-anchor="middle" fill="#2c3e50" font-size="12">Brand Analytics Semantic View</text>
-  <rect x="50" y="435" width="310" height="28" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="205" y="454" text-anchor="middle" fill="#2c3e50" font-size="12">Revenue and Growth Semantic View</text>
-  <rect x="50" y="470" width="310" height="28" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="205" y="489" text-anchor="middle" fill="#2c3e50" font-size="12">eCommerce and Digital Semantic View</text>
-  <rect x="50" y="505" width="310" height="28" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="205" y="524" text-anchor="middle" fill="#2c3e50" font-size="12">Operational Efficiency Semantic View</text>
+  <!-- Profile and Sample Questions row -->
+  <rect x="130" y="176" width="470" height="36" rx="8" fill="#fde8e8" stroke="#e74c3c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="365" y="199" text-anchor="middle" fill="#e74c3c" font-size="11">Sample Questions and Instructions</text>
+  <rect x="620" y="176" width="450" height="36" rx="8" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="845" y="199" text-anchor="middle" fill="#1abc9c" font-size="11">Profile: TSG Consumer Assistant</text>
 
-  <rect x="420" y="320" width="350" height="240" rx="12" fill="#f0faf4" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
-  <text x="595" y="348" text-anchor="middle" fill="#2ecc71" font-size="16" font-weight="bold">Cortex Search Services</text>
-  <rect x="440" y="365" width="310" height="28" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="595" y="384" text-anchor="middle" fill="#2c3e50" font-size="12">Brand Strategy Knowledge Base</text>
-  <rect x="440" y="400" width="310" height="28" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="595" y="419" text-anchor="middle" fill="#2c3e50" font-size="12">Market Research Documents</text>
-  <rect x="440" y="435" width="310" height="28" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="595" y="454" text-anchor="middle" fill="#2c3e50" font-size="12">Portfolio Company Insights</text>
-  <rect x="440" y="470" width="310" height="28" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="595" y="489" text-anchor="middle" fill="#2c3e50" font-size="12">Channel Strategy Playbooks</text>
-  <rect x="440" y="505" width="310" height="28" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="595" y="524" text-anchor="middle" fill="#2c3e50" font-size="12">Operations Best Practices</text>
+  <!-- Arrows: Agent down to Intelligence Tools -->
+  <line x1="250" y1="225" x2="250" y2="260" stroke="#29b5e8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="600" y1="225" x2="600" y2="260" stroke="#2ecc71" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="950" y1="225" x2="950" y2="260" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowOrange)"/>
 
-  <rect x="810" y="320" width="360" height="240" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
-  <text x="990" y="348" text-anchor="middle" fill="#f39c12" font-size="16" font-weight="bold">ML Models and Functions</text>
-  <rect x="830" y="365" width="320" height="28" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="990" y="384" text-anchor="middle" fill="#2c3e50" font-size="12">Brand Lifetime Value Prediction</text>
-  <rect x="830" y="400" width="320" height="28" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="990" y="419" text-anchor="middle" fill="#2c3e50" font-size="12">Portfolio Churn Risk Scoring</text>
-  <rect x="830" y="435" width="320" height="28" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="990" y="454" text-anchor="middle" fill="#2c3e50" font-size="12">Revenue Growth Forecast</text>
-  <rect x="830" y="470" width="320" height="28" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="990" y="489" text-anchor="middle" fill="#2c3e50" font-size="12">Market Opportunity Scoring</text>
-  <rect x="830" y="505" width="320" height="28" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="990" y="524" text-anchor="middle" fill="#2c3e50" font-size="12">Agent UDF Functions</text>
+  <!-- ============================================================ -->
+  <!-- ROW 2: Intelligence Tools                                    -->
+  <!-- ============================================================ -->
+  <!-- Cortex Analyst -->
+  <rect x="50" y="270" width="340" height="210" rx="12" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="296" text-anchor="middle" fill="#29b5e8" font-size="15" font-weight="bold">Cortex Analyst (Text-to-SQL)</text>
+  <rect x="70" y="310" width="300" height="26" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="220" y="328" text-anchor="middle" fill="#2c3e50" font-size="11">Portfolio Performance Semantic View</text>
+  <rect x="70" y="342" width="300" height="26" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="220" y="360" text-anchor="middle" fill="#2c3e50" font-size="11">Brand Analytics Semantic View</text>
+  <rect x="70" y="374" width="300" height="26" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="220" y="392" text-anchor="middle" fill="#2c3e50" font-size="11">Revenue and Growth Semantic View</text>
+  <rect x="70" y="406" width="300" height="26" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="220" y="424" text-anchor="middle" fill="#2c3e50" font-size="11">eCommerce and Digital Semantic View</text>
+  <rect x="70" y="438" width="300" height="26" rx="6" fill="#e8f4fd" stroke="#29b5e8" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="220" y="456" text-anchor="middle" fill="#2c3e50" font-size="11">Operational Efficiency Semantic View</text>
 
-  <rect x="250" y="610" width="700" height="180" rx="16" fill="#e8f4fd" stroke="#29b5e8" stroke-width="3" filter="url(#shadow)"/>
-  <rect x="270" y="618" width="660" height="35" rx="8" fill="#29b5e8" opacity="0.1"/>
-  <text x="600" y="642" text-anchor="middle" fill="#1a6fa0" font-size="20" font-weight="bold">TSG_AGENT - Snowflake Intelligence Agent</text>
+  <!-- Cortex Search -->
+  <rect x="430" y="270" width="340" height="210" rx="12" fill="#f0faf4" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="600" y="296" text-anchor="middle" fill="#2ecc71" font-size="15" font-weight="bold">Cortex Search Services</text>
+  <rect x="450" y="310" width="300" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="600" y="328" text-anchor="middle" fill="#2c3e50" font-size="11">Brand Strategy Knowledge Base</text>
+  <rect x="450" y="342" width="300" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="600" y="360" text-anchor="middle" fill="#2c3e50" font-size="11">Market Research Documents</text>
+  <rect x="450" y="374" width="300" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="600" y="392" text-anchor="middle" fill="#2c3e50" font-size="11">Portfolio Company Insights</text>
+  <rect x="450" y="406" width="300" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="600" y="424" text-anchor="middle" fill="#2c3e50" font-size="11">Channel Strategy Playbooks</text>
+  <rect x="450" y="438" width="300" height="26" rx="6" fill="#e8f8f0" stroke="#2ecc71" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="600" y="456" text-anchor="middle" fill="#2c3e50" font-size="11">Operations Best Practices</text>
 
-  <rect x="275" y="665" width="150" height="50" rx="8" fill="#f0f7fc" stroke="#29b5e8" stroke-width="1.5" filter="url(#shadowSm)"/>
-  <text x="350" y="686" text-anchor="middle" fill="#29b5e8" font-size="11" font-weight="bold">Orchestration</text>
-  <text x="350" y="702" text-anchor="middle" fill="#7f8c8d" font-size="10">Auto Model Routing</text>
+  <!-- ML Models -->
+  <rect x="810" y="270" width="340" height="210" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
+  <text x="980" y="296" text-anchor="middle" fill="#f39c12" font-size="15" font-weight="bold">ML Models and Functions</text>
+  <rect x="830" y="310" width="300" height="26" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="328" text-anchor="middle" fill="#2c3e50" font-size="11">Brand Lifetime Value Prediction</text>
+  <rect x="830" y="342" width="300" height="26" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="360" text-anchor="middle" fill="#2c3e50" font-size="11">Portfolio Churn Risk Scoring</text>
+  <rect x="830" y="374" width="300" height="26" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="392" text-anchor="middle" fill="#2c3e50" font-size="11">Revenue Growth Forecast</text>
+  <rect x="830" y="406" width="300" height="26" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="424" text-anchor="middle" fill="#2c3e50" font-size="11">Market Opportunity Scoring</text>
+  <rect x="830" y="438" width="300" height="26" rx="6" fill="#fdf3e0" stroke="#f39c12" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="980" y="456" text-anchor="middle" fill="#2c3e50" font-size="11">Agent UDF Functions</text>
 
-  <rect x="440" y="665" width="150" height="50" rx="8" fill="#f0faf4" stroke="#2ecc71" stroke-width="1.5" filter="url(#shadowSm)"/>
-  <text x="515" y="686" text-anchor="middle" fill="#2ecc71" font-size="11" font-weight="bold">Tool Router</text>
-  <text x="515" y="702" text-anchor="middle" fill="#7f8c8d" font-size="10">Analyst + Search + UDFs</text>
+  <!-- Arrows: Intelligence Tools down to Data Layer -->
+  <line x1="220" y1="480" x2="220" y2="518" stroke="#29b5e8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="600" y1="480" x2="600" y2="518" stroke="#2ecc71" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="980" y1="480" x2="980" y2="518" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowOrange)"/>
 
-  <rect x="605" y="665" width="150" height="50" rx="8" fill="#fef9f0" stroke="#f39c12" stroke-width="1.5" filter="url(#shadowSm)"/>
-  <text x="680" y="686" text-anchor="middle" fill="#f39c12" font-size="11" font-weight="bold">Response Engine</text>
-  <text x="680" y="702" text-anchor="middle" fill="#7f8c8d" font-size="10">Context-Aware Output</text>
+  <!-- ============================================================ -->
+  <!-- ROW 3: DATA & STORAGE LAYER (Prominent)                     -->
+  <!-- ============================================================ -->
+  <rect x="50" y="528" width="1100" height="120" rx="14" fill="#eaf7ee" stroke="#27ae60" stroke-width="2.5" filter="url(#shadowLg)"/>
+  <text x="600" y="554" text-anchor="middle" fill="#1e8449" font-size="17" font-weight="bold">DATA AND STORAGE LAYER — TSG_INTELLIGENCE Database</text>
 
-  <rect x="770" y="665" width="150" height="50" rx="8" fill="#f5f0fa" stroke="#9b59b6" stroke-width="1.5" filter="url(#shadowSm)"/>
-  <text x="845" y="686" text-anchor="middle" fill="#9b59b6" font-size="11" font-weight="bold">Budget Control</text>
-  <text x="845" y="702" text-anchor="middle" fill="#7f8c8d" font-size="10">60s / 32K tokens</text>
+  <rect x="75" y="568" width="240" height="34" rx="6" fill="#d5f5e3" stroke="#27ae60" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="195" y="590" text-anchor="middle" fill="#1e8449" font-size="12" font-weight="600">RAW Schema</text>
 
-  <rect x="275" y="730" width="320" height="40" rx="8" fill="#fde8e8" stroke="#e74c3c" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="435" y="755" text-anchor="middle" fill="#e74c3c" font-size="11">Sample Questions and Instructions</text>
-  <rect x="610" y="730" width="310" height="40" rx="8" fill="#e8f8f0" stroke="#1abc9c" stroke-width="1" filter="url(#shadowSm)"/>
-  <text x="765" y="755" text-anchor="middle" fill="#1abc9c" font-size="11">Profile: TSG Consumer Assistant</text>
+  <rect x="335" y="568" width="240" height="34" rx="6" fill="#d5f5e3" stroke="#27ae60" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="455" y="590" text-anchor="middle" fill="#1e8449" font-size="12" font-weight="600">ANALYTICS Schema</text>
 
-  <line x1="205" y1="560" x2="450" y2="610" stroke="#29b5e8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
-  <line x1="595" y1="560" x2="580" y2="610" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowGreen)"/>
-  <line x1="990" y1="560" x2="750" y2="610" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="595" y="568" width="260" height="34" rx="6" fill="#d5f5e3" stroke="#27ae60" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="725" y="590" text-anchor="middle" fill="#1e8449" font-size="12" font-weight="600">6 Analytical Views</text>
 
-  <text x="600" y="870" text-anchor="middle" fill="#95a5a6" font-size="11">TSG Consumer Partners - Snowflake Intelligence Architecture v1.0 - March 2026</text>
+  <rect x="875" y="568" width="250" height="34" rx="6" fill="#d5f5e3" stroke="#27ae60" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="1000" y="590" text-anchor="middle" fill="#1e8449" font-size="12" font-weight="600">Compute: TSG_WH (XS)</text>
+
+  <text x="600" y="636" text-anchor="middle" fill="#7f8c8d" font-size="11">Portfolio Tables  |  Brand Metrics  |  Revenue Data  |  eCommerce Analytics  |  Market Research  |  Operational KPIs</text>
+
+  <!-- Arrows: Data Layer down to Ingestion -->
+  <line x1="350" y1="648" x2="350" y2="686" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrowUp)"/>
+  <line x1="850" y1="648" x2="850" y2="686" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrowUp)"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 4: INGESTION LAYER                                      -->
+  <!-- ============================================================ -->
+  <rect x="150" y="696" width="900" height="68" rx="12" fill="#fef9f0" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
+  <text x="600" y="722" text-anchor="middle" fill="#f39c12" font-size="15" font-weight="bold">Ingestion Layer</text>
+  <text x="600" y="748" text-anchor="middle" fill="#7f8c8d" font-size="12">Snowpipe Streaming  |  Dynamic Tables (CDC)  |  Scheduled Tasks  |  External API Connectors  |  Data Sharing Imports</text>
+
+  <!-- Arrows: Ingestion down to Data Sources -->
+  <line x1="300" y1="764" x2="300" y2="802" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrowUp)"/>
+  <line x1="800" y1="764" x2="800" y2="802" stroke="#29b5e8" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 5: DATA SOURCES + PORTCO DATA SHARING                   -->
+  <!-- ============================================================ -->
+
+  <!-- Traditional Data Sources (left) -->
+  <rect x="50" y="812" width="300" height="200" rx="12" fill="#f0f7fc" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="838" text-anchor="middle" fill="#3498db" font-size="14" font-weight="bold">Traditional Data Sources</text>
+  <rect x="70" y="852" width="260" height="26" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="200" y="870" text-anchor="middle" fill="#2c3e50" font-size="11">Portfolio Companies CRM</text>
+  <rect x="70" y="884" width="260" height="26" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="200" y="902" text-anchor="middle" fill="#2c3e50" font-size="11">Financial and Revenue Data</text>
+  <rect x="70" y="916" width="260" height="26" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="200" y="934" text-anchor="middle" fill="#2c3e50" font-size="11">Market Research and Insights</text>
+  <rect x="70" y="948" width="260" height="26" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="200" y="966" text-anchor="middle" fill="#2c3e50" font-size="11">Digital and eCommerce Analytics</text>
+  <rect x="70" y="980" width="260" height="26" rx="6" fill="#e8f4fd" stroke="#3498db" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="200" y="998" text-anchor="middle" fill="#2c3e50" font-size="11">Operational and Supply Chain</text>
+
+  <!-- PortCo Data Sharing (right — hero section) -->
+  <rect x="390" y="812" width="760" height="310" rx="14" fill="#f0f7fc" stroke="#29b5e8" stroke-width="2.5" filter="url(#shadowLg)"/>
+  <rect x="410" y="820" width="720" height="30" rx="8" fill="#29b5e8" opacity="0.1"/>
+  <text x="770" y="841" text-anchor="middle" fill="#1a6fa0" font-size="16" font-weight="bold">PortCo Data Sharing — Zero-Copy, Real-Time, No ETL</text>
+
+  <!-- Snowflake Customers (Green) -->
+  <text x="420" y="874" fill="#1e8449" font-size="12" font-weight="bold">Snowflake Customers — Active Data Sharing</text>
+
+  <rect x="420" y="882" width="220" height="46" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="530" y="901" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">Crumbl Cookies</text>
+  <text x="530" y="918" text-anchor="middle" fill="#27ae60" font-size="10">Mid-Market | 1 Stable Edge</text>
+
+  <rect x="660" y="882" width="220" height="46" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="770" y="901" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">Thrive Pet Healthcare</text>
+  <text x="770" y="918" text-anchor="middle" fill="#27ae60" font-size="10">Mid-Market | 5 Stable Edges</text>
+
+  <rect x="900" y="882" width="220" height="46" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="1010" y="901" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">ATI Restoration</text>
+  <text x="1010" y="918" text-anchor="middle" fill="#27ae60" font-size="10">Commercial | Customer</text>
+
+  <!-- Self-Service (Amber) -->
+  <text x="420" y="952" fill="#e67e22" font-size="12" font-weight="bold">Self-Service Accounts — Sharing Opportunity</text>
+
+  <rect x="420" y="960" width="220" height="46" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="530" y="979" text-anchor="middle" fill="#b7950b" font-size="11" font-weight="bold">Saltair</text>
+  <text x="530" y="996" text-anchor="middle" fill="#f39c12" font-size="10">Commercial | 1 Active Edge</text>
+
+  <rect x="660" y="960" width="220" height="46" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="770" y="979" text-anchor="middle" fill="#b7950b" font-size="11" font-weight="bold">Wrench Group</text>
+  <text x="770" y="996" text-anchor="middle" fill="#f39c12" font-size="10">Enterprise | No Sharing Yet</text>
+
+  <!-- Prospects (Gray) -->
+  <text x="420" y="1032" fill="#7f8c8d" font-size="12" font-weight="bold">Prospects — Future Data Sharing Pipeline</text>
+
+  <rect x="420" y="1040" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="490" y="1063" text-anchor="middle" fill="#7f8c8d" font-size="10">DUDE Wipes</text>
+
+  <rect x="572" y="1040" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="642" y="1063" text-anchor="middle" fill="#7f8c8d" font-size="10">Legacy.com</text>
+
+  <rect x="724" y="1040" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="794" y="1063" text-anchor="middle" fill="#7f8c8d" font-size="10">Mavis Tire</text>
+
+  <rect x="876" y="1040" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="946" y="1063" text-anchor="middle" fill="#7f8c8d" font-size="10">Power Stop</text>
+
+  <rect x="420" y="1082" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="490" y="1105" text-anchor="middle" fill="#7f8c8d" font-size="10">Radiance Holdings</text>
+
+  <rect x="572" y="1082" width="140" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="642" y="1105" text-anchor="middle" fill="#7f8c8d" font-size="10">Revolut Ltd</text>
+
+  <rect x="724" y="1082" width="170" height="36" rx="6" fill="#f2f3f4" stroke="#bdc3c7" stroke-width="1" filter="url(#shadowSm)"/>
+  <text x="809" y="1105" text-anchor="middle" fill="#7f8c8d" font-size="10">Super Star Car Wash</text>
+
+  <!-- Footer -->
+  <text x="600" y="1140" text-anchor="middle" fill="#95a5a6" font-size="11">TSG Consumer Partners — Snowflake Intelligence Architecture v2.0 — October 2026</text>
 </svg>
